@@ -1,0 +1,109 @@
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+      JS LOG: GNOME Shell started at Fri Oct 05 2012 19:24:50 GMT+0300 (CAT)
+    JS ERROR: !!!   Exception was: TypeError: this._gdm.list_users is not a function
+    JS ERROR: !!!     lineNumber = '70'
+    JS ERROR: !!!     fileName = '/usr/share/gnome-shell/js/ui/statusMenu.js'
+    JS ERROR: !!!     message = 'this._gdm.list_users is not a function'
+    JS ERROR: !!!     stack = '([object _private_Gdm_UserManager],[object _private_Gdm_User])@/usr/share/gnome-shell/js/ui/statusMenu.js:70
+([object _private_Gdm_UserManager],[object _private_Gdm_User])@/usr/share/gjs-1.0/lang.js:110
+Error("Chained exception")@:0
+("Chained exception")@gjs_throw:0
+'
+    JS ERROR: !!!   Exception was: TypeError: this._gdm.list_users is not a function
+    JS ERROR: !!!     lineNumber = '70'
+    JS ERROR: !!!     fileName = '/usr/share/gnome-shell/js/ui/statusMenu.js'
+    JS ERROR: !!!     message = 'this._gdm.list_users is not a function'
+    JS ERROR: !!!     stack = '([object _private_Gdm_UserManager])@/usr/share/gnome-shell/js/ui/statusMenu.js:70
+([object _private_Gdm_UserManager])@/usr/share/gjs-1.0/lang.js:110
+Error("Chained exception")@:0
+("Chained exception")@gjs_throw:0
+'
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+** Message: Error: Resource not found.
+gstfilesrc.c(1055): gst_file_src_start (): /GstPlayBin2:play/GstURIDecodeBin:uridecodebin0/GstFileSrc:source:
+No such file "/media/8ED0-488A/video project/final_video.mp4"
+
+totem-video-thumbnailer couldn't open file 'file:///media/8ED0-488A/video%20project/final_video.mp4'
+Reason: Location not found..
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+Created new window in existing browser session.
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+    JS ERROR: !!!   Unhandled type int32 releasing GArgument
+Window manager warning: Received a _NET_WM_MOVERESIZE message for 0x445c552 (mohamedman); these messages lack timestamps and therefore suck.

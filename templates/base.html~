@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="/static/css/960.css"/>
+	<link rel="stylesheet" href="/static/css/style.css"/>
+
+	<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js" ></script>
+	<script type="text/javascript" src="/static/js/script.js" ></script>
+
+	<title>Thesis Project</title>
+</head>
+<body>
+
+
+
+		<!-- grid_0 -->
+	<div class="grid_0">
+		<div id="topbar">
+			<div id="logo"><img src="/static/img/logo_full.png" alt=""/></div>
+			<div id="menu">
+				<ul>
+					<li><a href="#" class="active">Home </a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Popular</a></li>
+					<li><a href="#">Author</a></li>
+				</ul>
+			</div>
+						<ul id="user_tools">
+						{% if user.is_authenticated %}
+			<li id="notification">notification</li>
+			<li id="settings"> <a href="/settings"> settings<setting </a></li>
+			<li id="logout"> <a href="/logout"> logout<setting </a></li>
+
+					{% else %}
+
+
+			<li id="register"> <a href="/register"> register<register </a></li>
+
+			<li id="login"> <a href="/login"> login<login </a></li>
+
+
+			</div>
+			g% endif %}
+						</ul>
+		</div>
+
+	</div>
+
+	<!-- #grid_0 -->
+		<div class="clear"></div>
+
+		<!-- container_12 -->
+	<div class="container_12">
+
+		<!-- #left col -->
+	<div id="left_col" class="grid_9">
+
+		<!-- post -->
+	<div class="post">
+
+	<h1 class="post_title">A Phase-Controlled 12-Plus with Unity Displacment Factor
+without Phase Shifting Transformer</h1>
+
+		<div class="post_date">
+		<div class="pub_on">Published on 12.9.1998</div>
+		<div class="posted_on">Posted on 30.3.2012</div>
+
+		</div>
+
+		<div class="post_container grid_9">
+
+			<div class="post_content">
+
+	{% block content %}
+
+	{% endblock %}
+
+
+			</div>
+
+			<div class="tools">
+			<div id="fav"></div>
+			<div id="save"></div>
+			<div id="print"></div>
+			<div id="page_ctrls">
+				<div id="up"></div>
+<!--				<input type="" text=""/>-->
+				<div id="down"></div>
+			</div>
+			<div id="zoom"></div>
+			<div id="zoom_in"></div>
+			<div id="zoom_out"></div>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- #post -->
+
+	</div>
+			<!-- #left col -->
+
+		<!-- right col -->
+	<div id="right_col" class="grid_3">
+	<div class="friend_feed">
+	<h1 class="feed_main_title">Friend Feed</h1>
+	<!-- Feed Item -->
+<div class="feed_item">
+		<img src="/static/img/avatar-40.png" alt=""/>
+		<div class="feed_details">
+		<span class="user"><a href="#">Minato</a></span>
+		<span class="action"><a href="#">Likes</a></span>
+		<span class="book"><a href="#">Intro to Anchor CMS</a></span>
+		<span class="book_type"><a href="#">doc</a></span>
+
+		</div>
+		<div class="feed_time"><a href="#">10 minutes ago</a></div>
+	</div>
+		<!-- #Feed Item -->
+	<!-- Feed Item -->
+<div class="feed_item">
+		<img src="/static/img/avatar-40.png" alt=""/>
+		<div class="feed_details">
+		<span class="user"><a href="#">Minato</a></span>
+		<span class="action"><a href="#">Likes</a></span>
+		<span class="book"><a href="#">Intro to Anchor CMS</a></span>
+		<span class="book_type"><a href="#">doc</a></span>
+
+		</div>
+		<div class="feed_time"><a href="#">10 minutes ago</a></div>
+	</div>
+		<!-- #Feed Item -->
+	<!-- Feed Item -->
+<div class="feed_item">
+		<img src="/static/img/avatar-40.png" alt=""/>
+		<div class="feed_details">
+		<span class="user"><a href="#">Minato</a></span>
+		<span class="action"><a href="#">Likes</a></span>
+		<span class="book"><a href="#">Intro to Anchor CMS</a></span>
+		<span class="book_type"><a href="#">doc</a></span>
+
+		</div>
+		<div class="feed_time"><a href="#">10 minutes ago</a></div>
+	</div>
+		<!-- #Feed Item -->
+	<!-- Feed Item -->
+<div class="feed_item">
+		<img src="/static/img/avatar-40.png" alt=""/>
+		<div class="feed_details">
+		<span class="user"><a href="#">Minato</a></span>
+		<span class="action"><a href="#">Likes</a></span>
+		<span class="book"><a href="#">Intro to Anchor CMS</a></span>
+		<span class="book_type"><a href="#">doc</a></span>
+
+		</div>
+		<div class="feed_time"><a href="#">10 minutes ago</a></div>
+	</div>
+		<!-- #Feed Item -->
+
+
+	</div>
+
+
+	<div class="friend_feed">
+	<h1 class="feed_main_title">General Feed</h1>
+	<!-- Feed Item -->
+<div class="feed_item">
+		<img src="/static/img/avatar-40.png" alt=""/>
+		<div class="feed_details">
+		<span class="user"><a href="#">Minato</a></span>
+		<span class="action"><a href="#">Likes</a></span>
+		<span class="book"><a href="#">Intro to Anchor CMS</a></span>
+		<span class="book_type"><a href="#">doc</a></span>
+
+		</div>
+		<div class="feed_time"><a href="#">10 minutes ago</a></div>
+	</div>
+		<!-- #Feed Item -->
+
+	<!-- Feed Item -->
+<div class="feed_item">
+		<img src="/static/img/avatar-40.png" alt=""/>
+		<div class="feed_details">
+		<span class="user"><a href="#">Minato</a></span>
+		<span class="action"><a href="#">Likes</a></span>
+		<span class="book"><a href="#">Intro to Anchor CMS</a></span>
+		<span class="book_type"><a href="#">doc</a></span>
+
+		</div>
+		<div class="feed_time"><a href="#">10 minutes ago</a></div>
+	</div>
+		<!-- #Feed Item -->
+
+	<!-- Feed Item -->
+<div class="feed_item">
+		<img src="/static/img/avatar-40.png" alt=""/>
+		<div class="feed_details">
+		<span class="user"><a href="#">Minato</a></span>
+		<span class="action"><a href="#">Likes</a></span>
+		<span class="book"><a href="#">Intro to Anchor CMS</a></span>
+		<span class="book_type"><a href="#">doc</a></span>
+
+		</div>
+		<div class="feed_time"><a href="#">10 minutes ago</a></div>
+	</div>
+		<!-- #Feed Item -->
+
+
+	</div>
+
+
+
+
+
+	</div>
+	<!-- #right col -->
+
+	<div class="clear"></div>
+	</div>
+	<!-- #container_12 -->
+
+
+</body>
+</html>
+
+
+
+

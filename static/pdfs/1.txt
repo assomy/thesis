@@ -1,0 +1,71 @@
+Latent Class Transliteration based on Source Language Origin
+
+Masato Hagiwara
+
+Satoshi Sekine
+
+Rakuten Institute of Technology, New York
+Rakuten Institute of Technology, New York
+215 Park Avenue South, New York, NY
+215 Park Avenue South, New York, NY
+masato.hagiwara@mail.rakuten.com satoshi.b.sekine@mail.rakuten.com
+
+Abstract
+Transliteration, a rich source of proper noun
+spelling variations, is usually recognized by
+phonetic- or spelling-based models. However, a single model cannot deal with different words from different language origins,
+e.g., “get” in “piaget” and “target.” Li et
+al. (2007) propose a method which explicitly
+models and classiﬁes the source language origins and switches transliteration models accordingly. This model, however, requires an
+explicitly tagged training set with language
+origins. We propose a novel method which
+models language origins as latent classes. The
+parameters are learned from a set of transliterated word pairs via the EM algorithm. The
+experimental results of the transliteration task
+of Western names to Japanese show that the
+proposed model can achieve higher accuracy
+compared to the conventional models without
+latent classes.
+
+1
+
+Introduction
+
+Transliteration (e.g., “バラクオバマ baraku obama /
+Barak Obama”) is phonetic translation between languages with different writing systems. Words are
+often transliterated when imported into differet languages, which is a major cause of spelling variations
+of proper nouns in Japanese and many other languages. Accurate transliteration is also the key to
+robust machine translation systems.
+Phonetic-based rewriting models (Knight and
+Jonathan, 1998) and spelling-based supervised models (Brill and Moore, 2000) have been proposed for
+
+recognizing word-to-word transliteration correspondence. These methods usually learn a single model
+given a training set. However, single models cannot
+deal with words from multiple language origins. For
+example, the “get” parts in “piaget / ピアジェ piaje”
+(French origin) and “target / ターゲット t¯ getto”
+a
+(English origin) may differ in how they are transliterated depending on their origins.
+Li et al. (2007) tackled this issue by proposing a
+class transliteration model, which explicitly models
+and classiﬁes origins such as language and genders,
+and switches corresponding transliteration model.
+This method requires training sets of transliterated
+word pairs with language origin. However, it is difﬁcult to obtain such tagged data, especially for proper
+nouns, a rich source of transliterated words. In addition, the explicitly tagged language origins are not
+necessarily helpful for loanwords. For example, the
+word “spaghetti” (Italian origin) can also be found
+in an English dictionary, but applying an English
+model can lead to unwanted results.
+In this paper, we propose a latent class transliteration model, which models the source language origin as unobservable latent classes and applies appropriate transliteration models to given transliteration
+pairs. The model parameters are learned via the EM
+algorithm from training sets of transliterated pairs.
+We expect that, for example, a latent class which is
+mostly occupied by Italian words would be assigned
+to “spaghetti / スパゲティ supageti” and the pair will
+be correctly recognized.
+In the evaluation experiments, we evaluated the
+accuracy in estimating a corresponding Japanese
+transliteration given an unknown foreign word,
+
+
