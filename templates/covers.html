@@ -1,35 +1,10 @@
+	<link rel="stylesheet" href="/static/css/style_covers.css"/>
 			{% extends "base.html" %}
 {% block content %}
 
 
+
 	<h1 class="post_title">Books available to Read</h1>
-
-<style type="text/css">
-div.img
-{
-  margin: 2px;
-  border: 1px solid #0000ff;
-  height: auto;
-  width: auto;
-  float: left;
-  text-align: center;
-}
-div.img img
-{
-  display: inline;
-  margin: 3px;
-  border: 1px solid #ffffff;
-}
-div.img a:hover img {border: 1px solid #0000ff;}
-div.desc
-{
-  text-align: center;
-  font-weight: normal;
-  width: 120px;
-  margin: 2px;
-}
-</style>
-
 {% for picture,id,name  in books %}
 <div class="img">
     <a target="_blank" href="{{id}}"><img src="{{picture}}" alt="{{name}}" width="410" height="420" /></a>
