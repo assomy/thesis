@@ -12,10 +12,10 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
 from urlparse import urlparse
 from datetime import datetime, timedelta
-from django.db.models import Q
 from django.core.paginator import Paginator
 from bookmarks.forms import *
 from bookmarks.models import *
+
 def register_page(request):
   if request.method == 'POST':
     form = RegistrationForm(request.POST)

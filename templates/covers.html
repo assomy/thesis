@@ -28,10 +28,10 @@ div.desc
 }
 </style>
 
-{% for pictures,names  in books %}
+{% for picture,id,name  in books %}
 <div class="img">
- <a target="_blank" href="{{pictures}}"><img src="{{pictures}}" alt="{{names}}" width="410" height="420" /></a>
- <div class="desc">{{names}}</div>
+    <a target="_blank" href="{{id}}"><img src="{{picture}}" alt="{{name}}" width="410" height="420" /></a>
+ <div class="desc">{{name}}</div>
 </div>
 
 
