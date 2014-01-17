@@ -17,7 +17,9 @@ class Document(models.Model):
    title = models.CharField(blank=True, null=True,max_length=255)
    author = models.CharField(blank=True, null=True,max_length=255)
    info = models.TextField(blank=True, null=True,max_length=255)
-#   print "title = %s" % (self.getDocumentInfo().title)
+   create_at= models.DateTimeField(auto_now=True)
+   date=models.CharField(blank=True, null=True,max_length=255)
+#   print "title = %s" % (self.getDocumentInfo().title)o
 
    def get_all_pages(self):
       return [self.get_page(i) for i in xrange(0, self.num_pages)]
@@ -81,6 +83,7 @@ class Document(models.Model):
       instance.title = r.getDocumentInfo().title
       instance.author = r.getDocumentInfo().author
       instance.info = r.getDocumentInfo()
+      instance.date=r.getDocumentInfo().items()[1][1]
       print "title = %s" % (r.getDocumentInfo().title)
 
 pre_save.connect(Document.pre_save_handler, sender=Document)

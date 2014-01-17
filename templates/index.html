@@ -2,17 +2,30 @@
 {% block content %}
 
 
+<a href="{{prev_page}}" ><<</a>||
+<a href="{{next_page}}" >>></a>
+<h1 class="post_title">{{title}}</h1>
 
-			{% if user.is_authenticated %}
-			{% else %}
+<div class="post_date">
+    <div class="posted_on">Created on:{{d.create_at}}</div>
+    <div class="pub_on">Published on:{{d.date}}</div>
 
-			{% endif %}
+</div>
 
 
-			     <a href=" {{page.get_absolute_url}}" alt="Picture"><img src=" {{page.get_absolute_url}}" width=500px hight=300px border="5"  alt="Picture"></a>
-                 {{page.text}}
 
-	{% endblock %}
+{% if user.is_authenticated %}
+{% else %}
+
+{% endif %}
+
+
+<a href=" {{page.get_absolute_url}}" alt="Picture"><img src=" {{page.get_absolute_url}}" width=500px hight=300px border="5"  alt="Picture"></a>
+{{page.text}}
+
+
+
+{% endblock %}
 
 
 

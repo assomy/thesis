@@ -13,9 +13,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.sqlite3', 
         'NAME': 'thesis.example.db', 
-           
                }
 }
 
@@ -96,6 +95,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    'django.contrib.sitemaps',
     'pdfviewer',
     'django.contrib.admin',
     'bookmarks',   

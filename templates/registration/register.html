@@ -3,24 +3,12 @@
 
 
 
-			{% if user.is_authenticated %}
-			<p><br>Your are already rigisterd !<br><p>
-			{% else %}
+{% if user.is_authenticated %}
+<p><br>Your are already rigisterd !<br><p>
+{% else %}
 <form method="post" action=".">{% csrf_token %}
-  {{ form.as_ul }}
-  <input type="submit" value="register" />
+    {{ form.as_ul }}
+    <input type="submit" value="register" />
 </form>
-			{% endif %}
-
-			
-<!--			-->
-<!--			<img src="/static/img/pdf_place_holder.png" alt=""/>-->
-
-
-			
-			
-	
-	{% endblock %}
-
-
-
+{% endif %}
+{% endblock %}
