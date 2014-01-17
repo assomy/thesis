@@ -7,21 +7,12 @@ from pdfviewer.forms import DocumentForm
 from django.contrib.auth.decorators import login_required
 # view books by pages
 def page_png(request, document_id, page_id=None):
-   if page_id == None:
-      page_id = request.GET.get("page_id", 0)
-      page_id = int(page_id)
-      d = get_object_or_404(Document, pk=document_id)
-      p = d.get_page(page_id)
-      all=Document.objects.all()
-      pictures=[]
-      for x in all:
-        url= x.get_page(0).get_absolute_url()
-        pictures.append(url)
-      print pictures
-      print "this page png "
-      return render_to_response('covers.html', {"pictures": pictures},context_instance=RequestContext(request))
    page_id = int(page_id)
+   print "request page id",page_id
    d = get_object_or_404(Document, pk=document_id)
+   if page_id>d.num_pages-1:
+       page_id=d.num_pages-1
+   print "serving page id",page_id
    page = d.get_page(page_id)
    title=d.title
    print "this is the page index.html"
