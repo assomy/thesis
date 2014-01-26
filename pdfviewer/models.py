@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models.signals import pre_save
 from django.conf import settings
-from pyPdf import PdfFileReader
+from thesis.pdflib import PdfFileReader
 import os, os.path
 import shutil, subprocess
 from django.contrib.auth.models import User

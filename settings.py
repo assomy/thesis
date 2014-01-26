@@ -66,17 +66,7 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
  )
 
-AUTHENTICATION_BACKENDS = (
- )
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-
-    "allauth.context_processors.allauth",
-    "allauth.account.context_processors.account"
- )
-AUTHENTICATION_BACKENDS = (
-    "allauth.account.auth_backends.AuthenticationBackend",
- )
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
