@@ -1,11 +1,12 @@
 # Django settings for ecomstore project.
+
 #import logging
 #from sentry.client.handlers import SentryHandler
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 import os
 CURRENT_PATH = os.path.abspath( os.path.dirname( __file__ ).decode( 'utf-8' ) ).replace( '\\', '/' )
-ADMINS = ( 
+ADMINS = (
      ( 'assomy', 'assomy@gmail.com' ),
  )
 
@@ -13,8 +14,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', 
-        'NAME': 'thesis.example.db', 
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'thesis.example.db',
                }
 }
 
@@ -59,37 +60,37 @@ ADMIN_MEDIA_PREFIX = '/media/'
 SECRET_KEY = '!j$2vhi*4^#%*zib9dp3@khtx!az#3_(p^hog4*dds4(eqzb5&'
 
 # List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = ( 
+TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
  )
 
-AUTHENTICATION_BACKENDS = ( 
+AUTHENTICATION_BACKENDS = (
  )
 
-TEMPLATE_CONTEXT_PROCESSORS = ( 
-      
+TEMPLATE_CONTEXT_PROCESSORS = (
+
     "allauth.context_processors.allauth",
     "allauth.account.context_processors.account"
  )
-AUTHENTICATION_BACKENDS = ( 
+AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
- )    
-MIDDLEWARE_CLASSES = ( 
+ )
+MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
  )
 ROOT_URLCONF = 'thesis.urls'
-TEMPLATE_DIRS = ( 
+TEMPLATE_DIRS = (
     os.path.join( CURRENT_PATH, 'templates' ),
 
  )
 INTERNAL_IPS = ( '127.0.0.1', )
 TEMPLATE_DEBUG = DEBUG
-INSTALLED_APPS = ( 
+INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -98,13 +99,13 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'pdfviewer',
     'django.contrib.admin',
-    'bookmarks',   
+    'bookmarks',
  )
 
 SITE_NAME = 'Market Place'
 META_KEYWORDS = 'buy and sell'
 META_DESCRIPTION = 'cars,mobiles,laptop,computer'
-TEMPLATE_CONTEXT_PROCESSORS = ( 
+TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.auth',
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
