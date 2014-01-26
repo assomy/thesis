@@ -15,6 +15,7 @@ def page_png(request, document_id, page_id=None):
    print "serving page id",page_id
    page = d.get_page(page_id)
    title=d.title
+   page.text="<br>"+page.text.replace("\n","<br>")
    print "this is the page index.html"
    if  page_id>0:
        prev_page=page_id-1
