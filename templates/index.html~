@@ -1,7 +1,0 @@
-
-			
-			     <a href=" {{pictures_page.get_absolute_url}}" alt="Picture"><img src=" {{pictures_page.get_absolute_url}}" width=500px hight=300px  alt="Picture"></a>
-			
-
-
-
