@@ -1,10 +1,13 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 from django.shortcuts import render_to_response, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.template.context import RequestContext
 from models import Document
 from pdfviewer.forms import DocumentForm
-
+import markdown
 from django.contrib.auth.decorators import login_required
+from django.utils.encoding import smart_unicode
 # view books by pages
 def page_png(request, document_id, page_id=None):
    page_id = int(page_id)
@@ -15,7 +18,9 @@ def page_png(request, document_id, page_id=None):
    print "serving page id",page_id
    page = d.get_page(page_id)
    title=d.title
-   page.text="<br>"+page.text.replace("\n","<br>")
+   text=page.text
+   text=smart_unicode(text)
+   page.text=markdown.markdown(text)
    print "this is the page index.html"
    if  page_id>0:
        prev_page=page_id-1
