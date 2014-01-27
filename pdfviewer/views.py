@@ -80,4 +80,15 @@ def upload(request):
 
 
 
+def cupload(request):
+    from pdfviewer.models import Document
+    w=Document()
+    from django.core.files import File
+    #w.pdf_file=open("/home/esam/Downloads/79e4151366c15de4b2 (1).pdf","r")
+    w.pdf_file=File(open("/home/esam/Downloads/79e4151366c15de4b2 (1).pdf"))
+    w.save()
+    print "saved"
+    return HttpResponseRedirect('/uploadsuccess')
+
+
 
