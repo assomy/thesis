@@ -81,14 +81,24 @@ def upload(request):
 
 
 def cupload(request):
+    print "1"
     from pdfviewer.models import Document
-    w=Document()
     from django.core.files import File
-    #w.pdf_file=open("/home/esam/Downloads/79e4151366c15de4b2 (1).pdf","r")
-    w.pdf_file=File(open("/home/esam/Downloads/79e4151366c15de4b2 (1).pdf"))
-    w.save()
-    print "saved"
-    return HttpResponseRedirect('/uploadsuccess')
+    print "2"
+    import glob
+    files= glob.glob("/home/esam/Dropbox/Public/*/*/*/*.pdf")
+    print "3"
+    print files
+    try:
+        for pdf in files:
+            w=Document()
+            print "pdf ",pdf
+            #w.pdf_file=open("/home/esam/Downloads/79e4151366c15de4b2 (1).pdf","r")
+            w.pdf_file=File(open(pdf))
+            w.save()
+    except:
+        print "error at save file",pdf
+    print "saved",pdf
 
 
 
