@@ -9,3 +9,5 @@ static/pdfimages/*
 static/pdfs/*
 *.pdf*
 media/*
+*/*.pyc*
+

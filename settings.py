@@ -7,17 +7,21 @@ TEMPLATE_DEBUG = DEBUG
 import os
 CURRENT_PATH = os.path.abspath( os.path.dirname( __file__ ).decode( 'utf-8' ) ).replace( '\\', '/' )
 ADMINS = (
-     ( 'assomy', 'assomy@gmail.com' ),
- )
+        ( 'assomy', 'assomy@gmail.com' ),
+        )
 
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'thesis.example.db',
-               }
-}
+        'default': {
+            'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+            'NAME': 'thesis',                      # Or path to database file if using sqlite3.
+            'USER': 'root',                      # Not used with sqlite3.
+            'PASSWORD': '123456',                  # Not used with sqlite3.
+            'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+            'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+            }
+        }
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -61,45 +65,45 @@ SECRET_KEY = '!j$2vhi*4^#%*zib9dp3@khtx!az#3_(p^hog4*dds4(eqzb5&'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
- )
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+        #     'django.template.loaders.eggs.Loader',
+        )
 
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
- )
+        'django.middleware.common.CommonMiddleware',
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware',
+        )
 ROOT_URLCONF = 'thesis.urls'
 TEMPLATE_DIRS = (
-    os.path.join( CURRENT_PATH, 'templates' ),
+        os.path.join( CURRENT_PATH, 'templates' ),
 
- )
+        )
 INTERNAL_IPS = ( '127.0.0.1', )
 TEMPLATE_DEBUG = DEBUG
 INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.sitemaps',
-    'pdfviewer',
-    'django.contrib.admin',
-    'bookmarks',
- )
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.sites',
+        'django.contrib.messages',
+        'django.contrib.sitemaps',
+        'pdfviewer',
+        'django.contrib.admin',
+        'bookmarks',
+        )
 
 SITE_NAME = 'Market Place'
 META_KEYWORDS = 'buy and sell'
 META_DESCRIPTION = 'cars,mobiles,laptop,computer'
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.auth',
-    'django.core.context_processors.debug',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.media',
- #   'ecomstore.utils.context_processors.ecomstore',
- )
+        'django.core.context_processors.auth',
+        'django.core.context_processors.debug',
+        'django.core.context_processors.i18n',
+        'django.core.context_processors.media',
+        #   'ecomstore.utils.context_processors.ecomstore',
+        )
 

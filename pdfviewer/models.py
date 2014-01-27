@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 from django.db import models
 from django.db.models.signals import pre_save
 from django.conf import settings
@@ -5,8 +7,7 @@ from thesis.pdflib import PdfFileReader
 import os, os.path
 import shutil, subprocess
 from django.contrib.auth.models import User
-#this my model
-
+from django.utils.encoding import smart_unicode
 PDF_PATH = getattr(settings, "PDF_PATH", "pdfs")
 PDF_IMAGE_PATH = getattr(settings, "PDF_IMAGE_PATH", "pdfimages")
 
@@ -41,7 +42,9 @@ class Document(models.Model):
          "-sDEVICE=png16m","-dTextAlphaBits=4","-dGraphicsAlphaBits=4","-r144x144",
          "-sOutputFile=-", "-f%s" % os.path.join(settings.MEDIA_ROOT, self.pdf_file.name)], stdout=subprocess.PIPE)
       text_command = subprocess.Popen(["pdftotext","-f",str(page_no+1),"-l",str(page_no+1),os.path.join(settings.MEDIA_ROOT, self.pdf_file.name),"-"], shell=False, stdout=subprocess.PIPE)
-      text = text_command.stdout.read()
+      text =" "+smart_unicode(text_command.stdout.read())+" "
+      text=smart_unicode(text)
+      print "type is ", type(text)
       print "here is the text output",text
       output_filename, fname = self._find_next_image_filename(page_no)
       try:
@@ -58,7 +61,7 @@ class Document(models.Model):
          p.page_no = page_no
          p.image = fname
          p.document = self
-         p.text=text
+         p.text=" "+smart_unicode(text)+" "
          p.save()
          return p
 
@@ -79,10 +82,20 @@ class Document(models.Model):
    @staticmethod
    def pre_save_handler(sender, instance, **kwargs):
       r = PdfFileReader(instance.pdf_file)
+      print r.getDocumentInfo()
       instance.num_pages = r.numPages
-      instance.title = r.getDocumentInfo().title
-      instance.author = r.getDocumentInfo().author
-      instance.info = r.getDocumentInfo()
+      if r.getDocumentInfo().title:
+        title = r.getDocumentInfo().title
+      elif  r.getDocumentInfo().subject:
+        title = r.getDocumentInfo().subject
+      else:
+        title=""
+      instance.title =" "+title+" "
+      print "type",type(title)
+      if r.getDocumentInfo():
+        instance.info = smart_unicode(" "+str(r.getDocumentInfo())+" ")
+      else:
+        instance.info=" "
       instance.date=r.getDocumentInfo().items()[1][1]
       print "title = %s" % (r.getDocumentInfo().title)
 
