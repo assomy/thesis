@@ -5,7 +5,6 @@ from django.http import HttpResponseRedirect
 from django.template.context import RequestContext
 from models import Document
 from pdfviewer.forms import DocumentForm
-import markdown
 from django.contrib.auth.decorators import login_required
 from django.utils.encoding import smart_unicode
 # view books by pages
@@ -20,7 +19,7 @@ def page_png(request, document_id, page_id=None):
    title=d.title
    text=page.text
    text=smart_unicode(text)
-   page.text=markdown.markdown(text)
+   page.text=page.text
    print "this is the page index.html"
    if  page_id>0:
        prev_page=page_id-1
